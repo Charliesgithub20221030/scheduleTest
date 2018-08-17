@@ -1,15 +1,15 @@
-import schedule
-import time
+#import schedule
+#import time
 
-def job():
-    print("I'm working...")
+#def job():
+#    print("I'm working...")
 
 
 
 print('tesdt!!!!!!!!!!!')
 
-second_5_j = schedule.every(5).seconds.do(job)
+#second_5_j = schedule.every(5).seconds.do(job)
 # 無窮迴圈
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+#while True:
+#    schedule.run_pending()
+#    time.sleep(1)
