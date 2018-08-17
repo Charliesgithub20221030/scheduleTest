@@ -1,15 +1,13 @@
-#import schedule
-#import time
+from apscheduler.schedulers.blocking import BlockingScheduler
 
-#def job():
-#    print("I'm working...")
+sched = BlockingScheduler()
 
+@sched.scheduled_job('interval', minutes=3)
+def timed_job():
+    print('This job is run every three minutes.')
 
+@sched.scheduled_job('cron', day_of_week='mon-fri', hour=17)
+def scheduled_job():
+    print('This job is run every weekday at 5pm.')
 
-print('tesdt!!!!!!!!!!!')
-
-#second_5_j = schedule.every(5).seconds.do(job)
-# 無窮迴圈
-#while True:
-#    schedule.run_pending()
-#    time.sleep(1)
+sched.start()
