@@ -6,6 +6,7 @@ def job():
 
 
 
+print('tesdt!!!!!!!!!!!')
 
 second_5_j = schedule.every(5).seconds.do(job)
 # 無窮迴圈
